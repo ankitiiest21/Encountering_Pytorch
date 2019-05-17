@@ -37,3 +37,9 @@ print(params[0].size())                                           # Weight of th
 inputz = torch.randn(1,1,32,32)                                   # LeNet Input Example
 out = net(inputz)
 
+output = net(inputz)                               
+target = torch.randn(10)                                          # Creates a Random tensor of 10*1 dimensions where each element belongs to (0,1]
+target = target.view(1,-1)                                        # "-1" argument in the view(1,-1) specifies number of Columns to be unspecified(n(Row)=1)
+criterion = nn.MSELoss()
+loss = criterion(output,target)                                   # Loss function takes (Output,Target) pair of inputs
+print(loss)
