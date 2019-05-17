@@ -43,3 +43,10 @@ target = target.view(1,-1)                                        # "-1" argumen
 criterion = nn.MSELoss()
 loss = criterion(output,target)                                   # Loss function takes (Output,Target) pair of inputs
 print(loss)
+
+net.zero_grad()                                                   # Gradient Buffers of all Parameters set to Zero
+print('conv1.bias.grad before backward')
+print(net.conv1.bias.grad)                                        # CAUTION!!! Here "None" will be displayed as unless and until we backpropagate we cant make the Gradient Zero.
+loss.backward()                                                   # BackPropagate The Error 
+print('conv1.bias.grad after backward')
+print(net.conv1.bias.grad)
