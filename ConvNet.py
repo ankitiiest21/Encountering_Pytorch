@@ -7,7 +7,7 @@ class Net(nn.Module):
     def __init__(self):
         super(Net,self).__init__()
         self.conv1 = nn.Conv2d(1,6,5)                          # 1 Input Image Channel,6 Output Channel,5*5 Square Convolution. 
-        self.conv2 = nn.Conv2d(6,16,5)                         # 6 Input Image Channe;,16 Output Channel,5*5 Square Convolution.
+        self.conv2 = nn.Conv2d(6,16,5)                         # 6 Input Image Channel;,16 Output Channel,5*5 Square Convolution.
         self.fc1 = nn.Linear(16*5*5,120)                       # Fully Connected Layer 1
         self.fc2 = nn.Linear(120,84)                           # Fully Connected Layer 2
         self.fc3 = nn.Linear(84,10)                            # Fully Connected Layer 3(with the Output)
