@@ -1,3 +1,5 @@
+# Copy the folder given in the master branch and paste it into the working directory
+
 
 ------------------------------------- PREPARING  THE  DATA ------------------------------------------------------------------------
 
