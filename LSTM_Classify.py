@@ -184,7 +184,7 @@ for iter in range(0, n_iters + 1):
         hidden = (torch.randn(1, 1, 18),torch.randn(1, 1, 18))
         
         for i in range(line_tensor.size()[0]):
-            output, hidden = lstm(line_tensor.reshape(1, 1, -1), hidden)
+            output, hidden = lstm(line_tensor[i].reshape(1, 1, -1), hidden)
         
         return output
     for i in range(n_confusion):
